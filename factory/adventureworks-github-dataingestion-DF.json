@@ -1,0 +1,9 @@
+{
+	"name": "adventureworks-github-dataingestion-DF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f96803ea-39d0-46a5-8b4c-49d60ba656cc",
+		"tenantId": "f655a2e0-db3d-44d2-9b11-23dfca2def1f"
+	}
+}
