@@ -98,6 +98,10 @@
 										"linkedServiceName": {
 											"referenceName": "adventureworks_adls_LS",
 											"type": "LinkedServiceReference"
+										},
+										"path": {
+											"value": "@concat('logs/incompatible_rows/', item().p_folder_name, '/')",
+											"type": "Expression"
 										}
 									}
 								},
