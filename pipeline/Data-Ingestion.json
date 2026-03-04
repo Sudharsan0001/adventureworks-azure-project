@@ -87,24 +87,7 @@
 									}
 								},
 								"enableStaging": false,
-								"enableSkipIncompatibleRow": true,
-								"logSettings": {
-									"enableCopyActivityLog": true,
-									"copyActivityLogSettings": {
-										"logLevel": "Warning",
-										"enableReliableLogging": false
-									},
-									"logLocationSettings": {
-										"linkedServiceName": {
-											"referenceName": "adventureworks_adls_LS",
-											"type": "LinkedServiceReference"
-										},
-										"path": {
-											"value": "@concat('logs/incompatible_rows/', item().p_folder_name, '/')",
-											"type": "Expression"
-										}
-									}
-								},
+								"enableSkipIncompatibleRow": false,
 								"translator": {
 									"type": "TabularTranslator",
 									"typeConversion": true,
