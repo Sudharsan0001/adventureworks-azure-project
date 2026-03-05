@@ -125,6 +125,74 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "error-log",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [
+								{
+									"activity": "copy_github_data",
+									"dependencyConditions": [
+										"Failed"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": "[dbo].[log_pipeline_error]",
+								"storedProcedureParameters": {
+									"pipeline_name": {
+										"value": {
+											"value": "@pipeline().Pipeline",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"activity_name": {
+										"value": {
+											"value": "`copy_github_data`",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"file_name": {
+										"value": {
+											"value": "@item().p_file_name",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"folder_name": {
+										"value": {
+											"value": "@item().p_folder_name",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"error_message": {
+										"value": {
+											"value": "@activity('copy_github_data').error.message",
+											"type": "Expression"
+										},
+										"type": "String"
+									},
+									"status": {
+										"value": "`Failed`",
+										"type": "String"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "adventureworks_errorlogging_sqldb",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
