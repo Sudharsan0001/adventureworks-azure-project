@@ -1,0 +1,30 @@
+{
+	"name": "github_files_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "github_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_url": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().p_file_url",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

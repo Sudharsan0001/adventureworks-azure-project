@@ -1,0 +1,10 @@
+{
+	"name": "adventureworks_adls_LS",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adventureworksgithub.dfs.core.windows.net/"
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "adventureworks_errorlogging_sqldb",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adventureworks-github-server.database.windows.net",
+			"database": "adventureworks-github",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "smc_05mar26",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "adventureworks_errorlogging_sqldb_KV",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "adventureworks-github-sqldb-pwd"
+			}
+		}
+	}
+}

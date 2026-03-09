@@ -1,0 +1,19 @@
+{
+	"name": "parameters_lookup_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adventureworks_adls_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "adventureworks-parameters.json",
+				"fileSystem": "config"
+			}
+		},
+		"schema": {}
+	}
+}
