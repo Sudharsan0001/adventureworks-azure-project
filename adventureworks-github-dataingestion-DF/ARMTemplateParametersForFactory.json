@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adventureworks-github-dataingestion-DF"
+		},
+		"adventureworks_adls_LS_properties_typeProperties_url": {
+			"value": "https://adventureworksgithub.dfs.core.windows.net/"
+		},
+		"adventureworks_errorlogging_sqldb_properties_typeProperties_server": {
+			"value": "adventureworks-github-server.database.windows.net"
+		},
+		"adventureworks_errorlogging_sqldb_properties_typeProperties_database": {
+			"value": "adventureworks-github"
+		},
+		"adventureworks_errorlogging_sqldb_properties_typeProperties_userName": {
+			"value": "smc_05mar26"
+		},
+		"adventureworks_errorlogging_sqldb_KV_properties_typeProperties_baseUrl": {
+			"value": "https://adventureworks-github.vault.azure.net/"
+		},
+		"github_LS_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		}
+	}
+}
