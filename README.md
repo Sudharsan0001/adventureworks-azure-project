@@ -169,10 +169,4 @@ While this is a personal project, the following enterprise best practices have b
 - Secrets managed via Azure Key Vault
 - Medallion Architecture folder structure
 - Audit logging for every pipeline run
-- Git-based source control for all ADF artifacts
-
-In a full enterprise setup, this would also include:
-- Separate Dev and Prod ADF instances
-- Feature branch per developer workflow with PR approvals
-- UAT environment with a dedicated branch
-- Azure DevOps or GitHub Actions for CI/CD deployment
+- Git-based source control for all ADF artifacts.
